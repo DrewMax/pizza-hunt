@@ -68,6 +68,7 @@ const handlePizzaSubmit = event => {
     })
     .catch(err => {
       console.log(err);
+      saveRecord(formData);
     });
 };
 
@@ -76,3 +77,5 @@ const handlePizzaSubmit = event => {
 $pizzaForm.addEventListener('submit', handlePizzaSubmit);
 $addToppingBtn.addEventListener('click', handleAddTopping);
 
+
+module.exports = router;
