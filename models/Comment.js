@@ -31,11 +31,13 @@ const ReplySchema = new Schema({
 const CommentSchema = new Schema({
     writtenBy: {
         type: String,
-        required: 'You need to provide your name!',
+        required: true,
+        trim: true
     },
     commentBody: {
         type: String,
-        required: 'You need to provide a comment!',
+        required: true,
+        trim: true,
     },
     createdAt: {
         type: Date,
